@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('./assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 62px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    padding: 20px;
+    transition: height .6s ease;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+
+    i {
+        position: absolute;
+        left: 8.5px;
+        font-size: 28px;
+    }
+
+    input {
+        position: absolute;
+        height: 100%;
+        width: 318px;
+        background-color: transparent;
+        border: 2px solid rgba($color: #ffffff, $alpha: .2);
+        outline: none;
+        border-radius: 10px;
+        font-size: 22px;
+        color: #fff;
+        font-weight: 500;
+        text-transform: capitalize;
+        // padding: 0 48px 0 42px;
+        padding-left: 35px;
+        padding-right: 45px;
+        left: 0;
+
+        &::placeholder {
+            color: #ffffffc6;
+            text-transform: capitalize;
+        }
+    }
+
+    button {
+        position: absolute;
+        right: 0;
+        width: 40px;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 28px;
+        color: #fff;
+        padding: 0 40px 25px 7px;
+        cursor: pointer;
+    }
+}
+
+.weather-box {
+    text-align: center;
+    margin: 40px 0;
+
+    img {
+        width: 60%;
+    }
+
+    .temperature {
+        position: relative;
+        font-size: 64px;
+        line-height: 1;
+        font-weight: bold;
+        margin: 20px 0 6px 0px;
+        user-select: none;
+
+        span {
+            position: absolute;
+            font-size: 24px;
+            margin-left: 4px;
+        }
+    }
+
+    .description {
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: capitalize;
+        user-select: none;
+    }
+}
+
+.weather-details {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+
+    .humidity,
+    .wind {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        transform: scale(0%);
+
+    }
+
+    .humidity {
+        padding-left: 20px;
+        justify-content: flex-start;
+    }
+
+    i {
+        font-size: 56px;
+        margin-right: 10px;
+    }
+
+    span {
+        display: inline-block;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: bold;
+        // background-color: red;
+        margin-top: 7px;
+    }
+}
+
+.weather-details.active .humidity,
+.weather-details.active .wind {
+    transform: scale(1);
+    transition: transform 1s ease;
+    transition-delay: 1s;
+}
+
+.weather-details.active .humidity .info-humidity,
+.weather-details.active .wind .info-wind {
+    // transform: translateY(-100%);
+    overflow: hidden;
+}
+
+.weather-box,
+.weather-details,
+.not-found {
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.weather-box.active,
+.weather-details.active,
+.not-found.active {
+    visibility: visible;
+}
+
+.weather-box .box,
+.not-found .box {
+    transform: translateY(-100%);
+}
+
+.weather-box.active .box,
+.not-found.active .box {
+    transform: translateY(0%);
+    transition: transform 1s ease;
+    transition-delay: .6s;
+}
+
+.not-found {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // background-color: red;
+    text-align: center;
+    margin-top: 110px;
+
+    img {
+        width: 65%;
+    }
+
+    p {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 12px;
+    }
+}
+
+.city-hide {
+    // display: none;
+    text-align: center;
+    padding-top: 10px;
+    text-shadow: 0 0 5px #fff;
+}

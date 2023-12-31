@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather App</title>
+</head>
+
+<body class="">
+    <div class="container">
+        <form class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input id="ubicacion" type="text" placeholder="Ingrese su ubicacion..." autofocus>
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <p class="city-hide"></p>
+
+        <div class="weather-box">
+            <div class="box">
+                <div class="info-weather">
+                    <div class="weather">
+                        <img src="./assets/cloud.png" alt="imagen nube">
+                        <p class="temperature">16<span>°C</span></p>
+                        <p class="description">Nubes Dispersas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <div class="info-humidity">
+                        <span>0%</span>
+                    </div>
+                    <p>Humedad</p>
+                </div>
+            </div>
+
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <div class="info-wind">
+                        <span>0Km/h</span>
+                    </div>
+                    <p>Vel. Viento</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="not-found">
+            <div class="box">
+                <img src="./assets/404.png" alt="Ubicacion no encontrada">
+                <p>🗺️ Ubicación No Encontrada! 😵‍💫</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/182ae96ce8.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
