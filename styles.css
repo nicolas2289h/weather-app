@@ -5,15 +5,14 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   min-height: 100vh;
   background-color: rgb(146, 155, 255);
-  background-image: url("./assets/f3.jpg");
+  background-image: url("./assets/fond.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: left;
   background-attachment: fixed;
 }
 
@@ -27,6 +26,7 @@ body {
   padding: 20px;
   transition: height 0.6s ease;
   box-shadow: 0 0 2px #fff;
+  backdrop-filter: blur(10px);
 }
 
 .search-box {
@@ -87,7 +87,7 @@ body {
 
 .weather-box {
   text-align: center;
-  margin: 40px 0;
+  /* margin: 40px 0; */
 }
 
 .weather-box img {
