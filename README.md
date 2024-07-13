@@ -4,6 +4,7 @@ This project was built with:
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [SCSS](https://sass-lang.com/documentation/syntax)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## About The Project
